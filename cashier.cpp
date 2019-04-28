@@ -1,12 +1,13 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include "cashier.h"
 
 using namespace std;
 
 const int SALES_TAX = 0.06;
 
-int main()
+void cashier()
 {
 	//Info Storage
 	string date, isbn, title;
@@ -104,9 +105,4 @@ int main()
 			toupper(answer);
 		} while (answer == 'Y');
 	}
-	else
-	{
-		return 0;
-	}
-	return 0;
 }

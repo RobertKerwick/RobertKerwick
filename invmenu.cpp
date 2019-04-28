@@ -1,9 +1,10 @@
 #include <iostream>
 #include <iomanip>
+#include "invmenu.h"
 
 using namespace std;
 
-int main()
+void invMenu()
 {
 	//Info Storage
 	int selection;
@@ -23,25 +24,36 @@ int main()
 	cout << "Enter your choice: ";
 	cin >> selection;
 
-	//Menu selection loop
-	if (selection < 1 || selection > 5)
+	switch (selection)
 	{
-		do
-		{
-			cout << "Please enter a number in the range 1-5." << endl;
-			cout << "Enter your choice: ";
-			cin >> selection;
-		} while (selection < 1 || selection > 5);
+	case 1: lookUpBook();
+			break;
+	case 2: addBook();
+			break;
+	case 3: editBook();
+			break;
+	case 4: deleteBook();
+			break;
+	default: cout << "Please try again and enter a number in the range 1-4." << endl;
 	}
-	else
-	{
-		while (selection != 5)
-		{
-			cout << "You selected item " << selection << "." << endl;
-			cout << "Enter Your Choice: ";
-			cin >> selection;
-		}
-	}
+}
 
-	return 0;
+void lookUpBook()
+{
+	cout << "You selected Look Up Book." << endl;
+}
+
+void addBook()
+{
+	cout << "You selected Add Book" << endl;
+}
+
+void editBook()
+{
+	cout << "You selcted Edit Book" << endl;
+}
+
+void deleteBook()
+{
+	cout << "You selected Delete Book" << endl;
 }

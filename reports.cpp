@@ -1,9 +1,10 @@
 #include <iostream>
 #include <iomanip>
+#include "reports.h"
 
 using namespace std;
 
-int main()
+void reports()
 {
 	//Info storage
 	int option;
@@ -25,25 +26,50 @@ int main()
 	cout << "Enter Your Choice: ";
 	cin >> option;
 
-	//Menu Looping
-	if (option < 1 || option > 7)
+	switch (option)
 	{
-		do
-		{
-			cout << "Please enter a number in the range 1-7." << endl;
-			cout << "Enter Your Choice: ";
-			cin >> option;
-		} while (option < 1 || option > 7);
+	case 1: repListing();
+			break;
+	case 2: repWholesale();
+			break;
+	case 3: repRetail();
+			break;
+	case 4: repQty();
+			break;
+	case 5: repCost();
+			break;
+	case 6: repAge();
+			break;
+	default: cout << "Please try again and enter a number in the range 1-6." << endl;
 	}
-	else
-	{
-		while (option != 7)
-		{
-			cout << "You selected item " << option << "." << endl;
-			cout << "Enter Your Choice: ";
-			cin >> option;
-		}
-	}
+}
 
-	return 0;
+void repListing()
+{
+	cout << "You selected Inventory Listing." << endl;
+}
+
+void repWholesale()
+{
+	cout << "You selected Inventory Whole Sale." << endl;
+}
+
+void repRetail()
+{
+	cout << "You selected Inventory Retail Value." << endl;
+}
+
+void repQty()
+{
+	cout << "You selected Listing by Quantity." << endl;
+}
+
+void repCost()
+{
+	cout << "You selected Listing by Cost." << endl;
+}
+
+void repAge()
+{
+	cout << "You selected Listing by Age." << endl;
 }

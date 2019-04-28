@@ -1,6 +1,10 @@
 #include <iostream>
 #include <iomanip>
 #include <cctype>
+#include "cashier.h"
+#include "invmenu.h"
+#include "bookinfo.h"
+#include "reports.h"
 
 using namespace std;
 
@@ -23,24 +27,15 @@ int main()
 	cout << "Enter Your Choice: ";
 	cin >> choice;
 
-	//Menu loop
-	if (choice < 1 || choice > 4)
+	switch (choice)
 	{
-		do
-		{
-			cout << "Please enter a number in the range 1-4." << endl;
-			cout << "Enter Your Choice: ";
-			cin >> choice;
-		} while (choice < 1 || choice > 4);
-	}
-	else
-	{
-		while (choice != 4)
-		{
-			cout << "You selected item " << choice << "." << endl;
-			cout << "Enter Your Choice: ";
-			cin >> choice;
-		}
+	case 1: cashier();
+			break;
+	case 2: invMenu();
+			break;
+	case 3: reports();
+			break;
+	default: cout << "Please try again and enter a number in the range 1-4." << endl;
 	}
 
 	return 0;

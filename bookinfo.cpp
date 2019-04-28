@@ -1,9 +1,10 @@
 #include <iostream>
 #include <iomanip>
+#include "bookinfo.h"
 
 using namespace std;
 
-int main()
+void bookInfo()
 {
 	cout << setw(40) << "Serendipity Booksellers" << endl;		//Header for the output
 	cout << setw(37) << "Book Information" << endl;
@@ -18,6 +19,4 @@ int main()
 	cout << "Quantity-On-Hand:" << endl;
 	cout << "Wholesale Cost:" << endl;
 	cout << "Retail Price:" << endl;
-
-	return 0;
 }
