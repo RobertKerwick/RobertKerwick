@@ -21,11 +21,12 @@ int main()
 	cin >> quantity;
 	cout << "ISBN: ";
 	cin >> isbn;
-	cout << "Price: ";
-	cin >> price;
 	cin.ignore();
 	cout << "Title: ";
-	getline(cin, title); 
+	getline(cin, title);
+	cout << "Price: ";
+	cin >> price;
+
 
 	//Calculations - can be moved to a function
 	subtotal = price * quantity;
@@ -41,14 +42,14 @@ int main()
 
 	cout << "Qty" << setw(6) << "ISBN" << setw(17) << "Title" << setw(32) << "Price" << setw(10) << "Total" << endl;
 	cout << "_____________________________________________________________________" << endl;
-	cout << quantity << setw(17) << isbn << setw(22) << title << setw(15) << setprecision(2) << fixed << "$" << price << setw(3)
+	cout << quantity << setw(17) << isbn << setw(22) << title << setw(15) << setprecision(2) << fixed << "$" << price << setw(4)
 		 << "$" << subtotal << endl;
 	cout << endl;
 
 	cout << setprecision(2) << endl;
-	cout << setw(29) << "Subtotal" << setw(40) << subtotal << endl;
-	cout << setw(24) << "Tax" << setw(45) << tax << endl;
-	cout << setw(26) << "Total" << setw(43) << total <<  endl;
+	cout << setw(29) << "Subtotal" << setw(40) << "$" << subtotal << endl;
+	cout << setw(24) << "Tax" << setw(45) << "$" << tax << endl;
+	cout << setw(26) << "Total" << setw(43) << "$" << total <<  endl;
 	cout << endl;
 
 	cout << "Thank You For Shopping Serendipity!" << endl;
